@@ -17,7 +17,8 @@ const form = createForm({
 })
 
 const getForm=(e:any)=>{
-  console.log(e)
+  let form = e
+  console.log(form)
 }
 
 export default () => {
