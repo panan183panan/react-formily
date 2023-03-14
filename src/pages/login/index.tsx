@@ -109,7 +109,7 @@ export default () => {
                 ]}
               />
               <Submit block size="large">
-                Log in
+                Login
               </Submit>
             </Form>
           </Tabs.TabPane>

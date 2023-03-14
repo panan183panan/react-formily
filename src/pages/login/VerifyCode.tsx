@@ -13,7 +13,7 @@ export const VerifyCode: React.FC<React.PropsWithChildren<IVerifyCodeProps>> =
   ({ value, onChange, readyPost, phoneNumber, ...props }) => {
     const [lastTime, setLastTime] = useState(0);
 
-    const counting = (time = 20) => {
+    const counting = (time = 30) => {
       if (time < 0) return;
       setLastTime(time);
       setTimeout(() => {

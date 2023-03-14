@@ -6,8 +6,8 @@ import Regester from './pages/regester';
 export default function App() {
   return (
     <div>
-      {/* <Login /> */}
-      <Regester />
+      <Login />
+      {/* <Regester /> */}
     </div>
   );
 }
