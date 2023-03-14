@@ -1,25 +1,25 @@
-import React, { useState } from 'react'
-import { Input, Button } from 'antd'
+import React, { useState } from 'react';
+import { Input, Button } from 'antd';
 
 interface IVerifyCodeProps {
-  value?: any
-  onChange?: (value: any) => void
-  readyPost?: boolean
-  phoneNumber?: number
-  style?: React.CSSProperties
+  value?: any;
+  onChange?: (value: any) => void;
+  readyPost?: boolean;
+  phoneNumber?: number;
+  style?: React.CSSProperties;
 }
 
 export const VerifyCode: React.FC<React.PropsWithChildren<IVerifyCodeProps>> =
   ({ value, onChange, readyPost, phoneNumber, ...props }) => {
-    const [lastTime, setLastTime] = useState(0)
+    const [lastTime, setLastTime] = useState(0);
 
     const counting = (time = 20) => {
-      if (time < 0) return
-      setLastTime(time)
+      if (time < 0) return;
+      setLastTime(time);
       setTimeout(() => {
-        counting(time - 1)
-      }, 1000)
-    }
+        counting(time - 1);
+      }, 1000);
+    };
 
     return (
       <div
@@ -48,9 +48,9 @@ export const VerifyCode: React.FC<React.PropsWithChildren<IVerifyCodeProps>> =
               block
               onClick={() => {
                 if (phoneNumber) {
-                  console.log(`post code by phone number ${phoneNumber}`)
+                  console.log(`post code by phone number ${phoneNumber}`);
                 }
-                counting()
+                counting();
               }}
             >
               发送验证码
@@ -59,5 +59,5 @@ export const VerifyCode: React.FC<React.PropsWithChildren<IVerifyCodeProps>> =
           {lastTime > 0 && <span>剩余{lastTime}秒</span>}
         </div>
       </div>
-    )
-  }
+    );
+  };

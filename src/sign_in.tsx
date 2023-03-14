@@ -1,24 +1,24 @@
-import React from 'react'
-import { createForm } from '@formily/core'
-import { Field } from '@formily/react'
-import { Form, FormItem, Input, Password, Submit } from '@formily/antd'
-import { Tabs, Card } from 'antd'
-import { UserOutlined, LockOutlined, PhoneOutlined } from '@ant-design/icons'
-import { VerifyCode } from './VerifyCode'
-import './app.css'
+import React from 'react';
+import { createForm } from '@formily/core';
+import { Field } from '@formily/react';
+import { Form, FormItem, Input, Password, Submit } from '@formily/antd';
+import { Tabs, Card } from 'antd';
+import { UserOutlined, LockOutlined, PhoneOutlined } from '@ant-design/icons';
+import { VerifyCode } from './VerifyCode';
+import './app.css';
 
 const normalForm = createForm({
   validateFirst: true,
-})
+});
 
 const phoneForm = createForm({
   validateFirst: true,
-})
+});
 
-export default()=>{
+export default () => {
   return (
-    <div className='container' >
-      <Card style={{ width: 400}}>
+    <div className="container" >
+      <Card style={{ width: 400 }}>
         <Tabs style={{ overflow: 'visible', marginTop: -10 }}>
           <Tabs.TabPane key="1" tab="账号密码">
             <Form
@@ -81,11 +81,11 @@ export default()=>{
                 title="验证码"
                 required
                 reactions={(field) => {
-                  const phone = field.query('.phone')
+                  const phone = field.query('.phone');
                   field.setComponentProps({
                     readyPost: phone.get('valid') && phone.get('value'),
                     phoneNumber: phone.get('value'),
-                  })
+                  });
                 }}
                 decorator={[FormItem]}
                 component={[
@@ -112,5 +112,5 @@ export default()=>{
         </div>
       </Card>
     </div>
-  )
-}
+  );
+};

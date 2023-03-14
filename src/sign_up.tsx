@@ -1,6 +1,6 @@
-import React from 'react'
-import { createForm } from '@formily/core'
-import { Field } from '@formily/react'
+import React from 'react';
+import { createForm } from '@formily/core';
+import { Field } from '@formily/react';
 import {
   Form,
   FormItem,
@@ -8,22 +8,22 @@ import {
   Password,
   Submit,
   FormButtonGroup,
-} from '@formily/antd'
-import { Card } from 'antd'
-import './app.css'
+} from '@formily/antd';
+import { Card } from 'antd';
+import './app.css';
 
 const form = createForm({
   validateFirst: true,
-})
+});
 
-const getForm=(e:any)=>{
-  let form = e
-  console.log(form)
-}
+const getForm = (e: any) => {
+  let form = e;
+  console.log(form);
+};
 
 export default () => {
   return (
-    <div className='container' >
+    <div className="container" >
       <Card title="change password" style={{ width: 620 }}>
         <Form
           form={form}
@@ -57,14 +57,14 @@ export default () => {
                 checkStrength: true,
               },
             ]}
-            reactions={(field:any) => {
-              const confirm = field.query('.confirm_password')
+            reactions={(field: any) => {
+              const confirm = field.query('.confirm_password');
               field.selfErrors =
                 confirm.get('value') &&
                   field.value &&
                   field.value !== confirm.get('value')
                   ? 'Confirm that the password does not match'
-                  : ''
+                  : '';
             }}
           />
           <Field
@@ -78,14 +78,14 @@ export default () => {
                 checkStrength: true,
               },
             ]}
-            reactions={(field:any) => {
-              const confirm = field.query('.password')
+            reactions={(field: any) => {
+              const confirm = field.query('.password');
               field.selfErrors =
                 confirm.get('value') &&
                   field.value &&
                   field.value !== confirm.get('value')
                   ? 'Confirm that the password does not match'
-                  : ''
+                  : '';
             }}
           />
           <FormButtonGroup.FormItem>
@@ -96,5 +96,5 @@ export default () => {
         </Form>
       </Card>
     </div>
-  )
-}
+  );
+};

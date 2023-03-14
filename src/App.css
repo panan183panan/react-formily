@@ -1,13 +1,13 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-.container{
-  width:100vw;
+.container {
+  width: 100vw;
   display: flex;
   justify-content: center;
   background: #eee;
   padding: 40px 0;
-  margin:auto;
+  margin: auto;
 }
