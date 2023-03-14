@@ -90,7 +90,7 @@ export default () => {
           />
           <FormButtonGroup.FormItem>
             <Submit block size="large">
-              Confirm change
+              Register
             </Submit>
           </FormButtonGroup.FormItem>
         </Form>
