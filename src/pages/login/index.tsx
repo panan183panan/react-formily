@@ -15,17 +15,30 @@ const phoneForm = createForm({
   validateFirst: true,
 });
 
+
+// 账户登录
+const accountLogin = (e:any)=>{
+  let {username,password} = e;
+  console.log(username,password)
+}
+
+// 验证码登录
+const codeLogin = (e:any)=>{
+  let {phone,verifyCode} = e;
+  console.log(phone,verifyCode)
+}
+
 export default () => {
   return (
     <div className="container" >
-      <Card style={{ width: 400 }}>
-        <Tabs style={{ overflow: 'visible', marginTop: -10 }}>
+      <Card className='card'>
+        <Tabs className='tab'>
           <Tabs.TabPane key="1" tab="账号密码">
             <Form
               form={normalForm}
               layout="vertical"
               size="large"
-              onAutoSubmit={console.log}
+              onAutoSubmit={accountLogin}
             >
               <Field
                 name="username"
@@ -52,7 +65,7 @@ export default () => {
                 ]}
               />
               <Submit block size="large">
-                Log in
+                Login
               </Submit>
             </Form>
           </Tabs.TabPane>
@@ -61,7 +74,7 @@ export default () => {
               form={phoneForm}
               layout="vertical"
               size="large"
-              onAutoSubmit={console.log}
+              onAutoSubmit={codeLogin}
             >
               <Field
                 name="phone"

@@ -1,15 +1,13 @@
 import React from 'react';
-import Login from './sign_in';
-import Regester from './sign_up';
-import Formlist from './formsearch';
-import Formsroll from './formsroll';
+import Formlist from './pages/from/formsearch';
+import Formsroll from './pages/from/formsroll';
+import Login from './pages/login';
+import Regester from './pages/regester';
 export default function App() {
   return (
     <div>
-      <Login />
+      {/* <Login /> */}
       <Regester />
-      <Formlist />
-      <Formsroll />
     </div>
   );
 }
