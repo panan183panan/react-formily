@@ -17,15 +17,14 @@ const form = createForm({
 });
 
 const getForm = (e: any) => {
-  let {username,email,password} = e;
-  console.log(username,email,password);
-  
+  let { username, email, password } = e;
+  console.log(username, email, password);
 };
 
 export default () => {
   return (
     <div className="container" >
-      <Card className='card'>
+      <Card className="card">
         <Form
           form={form}
           labelCol={5}

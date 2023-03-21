@@ -17,22 +17,22 @@ const phoneForm = createForm({
 
 
 // 账户登录
-const accountLogin = (e:any)=>{
-  let {username,password} = e;
-  console.log(username,password)
-}
+const accountLogin = (e: any) => {
+  let { username, password } = e;
+  console.log(username, password);
+};
 
 // 验证码登录
-const codeLogin = (e:any)=>{
-  let {phone,verifyCode} = e;
-  console.log(phone,verifyCode)
-}
+const codeLogin = (e: any) => {
+  let { phone, verifyCode } = e;
+  console.log(phone, verifyCode);
+};
 
 export default () => {
   return (
     <div className="container" >
-      <Card className='card'>
-        <Tabs className='tab'>
+      <Card className="card">
+        <Tabs className="tab">
           <Tabs.TabPane key="1" tab="账号密码">
             <Form
               form={normalForm}
